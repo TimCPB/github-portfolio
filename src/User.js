@@ -11,11 +11,13 @@ class User extends Component {
   componentDidMount() {
     fetch("https://api.github.com/users/timcpb")
       .then((response) => response.json())
-      .then((response) => this.setState({ userData: response }));
+      .then((response) => {
+        this.setState({ userData: response });
+      });
   }
 
   render() {
-    return <div className="user">YOOOOOOO {this.state.userData.name}</div>;
+    return <div className="user">{this.state.userData.name}</div>;
   }
 }
 
