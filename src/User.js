@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class User extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      userData: {}
-    }
+      userData: {},
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://api.github.com/users/timcpb")
+      .then((response) => response.json())
+      .then((response) => this.setState({ userData: response }));
+  }
+
+  render() {
+    return <div className="user">YOOOOOOO {this.state.userData.name}</div>;
   }
 }
 
