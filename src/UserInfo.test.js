@@ -12,6 +12,8 @@ test("renders the users name", async () => {
 test("renders the users bio", async () => {
   render(<UserInfo userData={mockResponse} />);
 
-  const element = await waitFor(() => screen.getByText("Driven, enthusiastic"));
-  expect(element).toBeInTheDocument();
+  const element2 = await waitFor(() =>
+    screen.getByText(/Driven, enthusiastic/)
+  );
+  expect(element2).toBeInTheDocument();
 });

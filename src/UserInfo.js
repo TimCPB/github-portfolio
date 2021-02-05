@@ -3,7 +3,10 @@ import React from "react";
 function UserInfo(props) {
   return (
     <div className="user">
-      {props.userData.name}
+      <ul>
+        <li>{props.userData.name}</li>
+        <li>{props.userData.bio}</li>
+      </ul>
     </div>
   );
 }
