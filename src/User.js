@@ -10,12 +10,26 @@ class User extends Component {
   }
 
   async componentDidMount() {
-    const json = await fetchUserData()
-        this.setState({ userData: json });
+    const json = await fetchUserData();
+    this.setState({ userData: json });
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.userData);
   }
 
   render() {
-    return <div className="user">{this.state.userData.name}</div>;
+    return (
+      <div className="user">
+        {this.state.userData.name}
+        <img
+          src={this.state.userData.avatar_url}
+          alt="avatar"
+          height={200}
+          width={200}
+        ></img>
+      </div>
+    );
   }
 }
 
