@@ -4,7 +4,9 @@ import fetchUserData from "./utils";
 
 import "./App.css";
 // components
-import User from "./User.js";
+import Avatar from "./Avatar.js";
+import UserInfo from "./UserInfo.js";
+
 
 class App extends Component {
   constructor(props) {
@@ -28,10 +30,10 @@ class App extends Component {
       <div className="App">
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            <User userData={this.state.data} />
+            <Avatar userData={this.state.data} />
           </Grid>
           <Grid item xs={8}>
-            1
+            <UserInfo userData={this.state.data} />
           </Grid>
           <Grid item xs={4}>
             2

@@ -1,9 +1,8 @@
 import React from "react";
 
-function User(props) {
+function Avatar(props) {
   return (
     <div className="user">
-      {props.userData.name}
       <img
         src={props.userData.avatar_url}
         alt="avatar"
@@ -14,4 +13,4 @@ function User(props) {
   );
 }
 
-export default User;
+export default Avatar;
