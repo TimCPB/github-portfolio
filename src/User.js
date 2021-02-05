@@ -8,12 +8,10 @@ class User extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://api.github.com/users/timcpb")
-      .then((response) => response.json())
-      .then((response) => {
-        this.setState({ userData: response });
-      });
+  async componentDidMount() {
+    const response = await fetch("https://api.github.com/users/timcpb")
+    const json = await response.json();
+        this.setState({ userData: json });
   }
 
   render() {
