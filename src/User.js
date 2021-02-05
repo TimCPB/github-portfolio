@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import fetchUserData from "./utils";
 
 class User extends Component {
   constructor(props) {
@@ -9,8 +10,7 @@ class User extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch("https://api.github.com/users/timcpb")
-    const json = await response.json();
+    const json = await fetchUserData()
         this.setState({ userData: json });
   }
 
