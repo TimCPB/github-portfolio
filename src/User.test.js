@@ -8,3 +8,11 @@ test("renders the users name", async () => {
   const element = await waitFor(() => screen.getByText("Bim Tishop"));
   expect(element).toBeInTheDocument();
 });
+
+test("renders the users photo", async () => {
+  render(<User userData={mockResponse}/>);
+
+  const image = await waitFor(() => screen.getByAltText("avatar"));
+  expect(image.src).toContain(mockResponse.avatar_url)
+});
+
