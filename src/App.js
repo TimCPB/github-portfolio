@@ -6,9 +6,6 @@ import "./App.css";
 // components
 import Avatar from "./Avatar.js";
 import UserInfo from "./UserInfo.js";
-import Email from "./Email.js";
-import Location from "./Location.js";
-import Twitter from "./Twitter.js";
 
 
 class App extends Component {
@@ -39,13 +36,13 @@ class App extends Component {
             <UserInfo userData={this.state.data} />
           </Grid>
           <Grid item xs={4}>
-            <Email userData={this.state.data} />
+            3
           </Grid>
           <Grid item xs={4}>
-            <Location userData={this.state.data} />
+            4
           </Grid>
           <Grid item xs={4}>
-            <Twitter userData={this.state.data} />
+            5
           </Grid>
         </Grid>
       </div>
