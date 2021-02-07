@@ -16,4 +16,19 @@ test("renders the users bio", async () => {
     screen.getByText(/Driven, enthusiastic/)
   );
   expect(element2).toBeInTheDocument();
+
+});
+
+test("renders the users Twitter", async () => {
+  render(<UserInfo userData={mockResponse}/>);
+
+  const element = await waitFor(() => screen.getByText("test_twitter"));
+  expect(element).toBeInTheDocument()
+});
+
+test("renders the users Location", async () => {
+  render(<UserInfo userData={mockResponse}/>);
+
+  const element = await waitFor(() => screen.getByText("Belfast"));
+  expect(element).toBeInTheDocument()
 });

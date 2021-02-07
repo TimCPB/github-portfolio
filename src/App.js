@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import fetchUserData from "./utils";
+import "./Avatar.css";
 
 import "./App.css";
 // components
@@ -36,13 +37,13 @@ class App extends Component {
             <UserInfo userData={this.state.data} />
           </Grid>
           <Grid item xs={4}>
-            2
-          </Grid>
-          <Grid item xs={4}>
             3
           </Grid>
           <Grid item xs={4}>
             4
+          </Grid>
+          <Grid item xs={4}>
+            5
           </Grid>
         </Grid>
       </div>
